@@ -1,0 +1,10 @@
+Intro media/Textures/Start.png
+BgMenu media/Textures/BgMenu.png
+PlayerSprite media/Textures/PlayerSheet.png
+RatSprite media/Textures/RatSheet.png
+TileSheet media/Textures/tilesheet.png
+Bg1 media/Textures/bg1.png
+Bg2 media/Textures/bg2.png
+Background1 media/Textures/Background1.png
+bullet media/Textures/bullet.png
+ChiefSprite media/Textures/chief_sheet.png

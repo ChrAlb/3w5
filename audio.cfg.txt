@@ -1,0 +1,5 @@
+TestSound media/Audio/1_Mono.ogg
+Glass media/Audio/glass.ogg
+Footstep media/Audio/footstep.ogg
+Bonanza media/Audio/bonanza.ogg
+TownTheme media/Audio/TownTheme.ogg

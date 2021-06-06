@@ -1,0 +1,26 @@
+Window_close 0:0
+Fullscreen_toggle 5:89
+Intro_Continue 5:58
+Mouse_Left 9:0
+Mouse_Left_Release 10:0
+Key_Escape 5:36
+Key_P 5:15
+//Key_T 5:19
+//Key_K 5:10
+//Key_O 5:14
+//Key_X 5:23
+Player_MoveLeft 24:71
+Player_MoveRight 24:72
+//Player_MoveUp 24:73
+//Player_MoveDown 24:74
+Player_Attack 24:73
+MainMenu_Play 27:MainMenu:Play
+MainMenu_Edit 27:MainMenu:Edit
+MainMenu_Lab 27:MainMenu:Lab
+MainMenu_Quit 27:MainMenu:Quit
+LevelEditor_OK 27:LevelEditor:OK
+LevelEditor_Abbrechen 27:LevelEditor:Abbrechen
+LevelEditor_Laden 27:LevelEditor:Load
+Lab_Ok  27:Tes:OK
+Lab_Abbrechen  27:Tes:Abbrechen
+
