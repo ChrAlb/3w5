@@ -64,7 +64,7 @@ public:
 
 	void UpdateScrollHorizontal(unsigned int l_percent);
 	void UpdateScrollVertical(unsigned int l_percent);
-	Elements GUI_Interface::get_mElements();
+	Elements get_mElements();
 
 private:
 	void DefocusTextfields();

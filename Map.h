@@ -71,9 +71,9 @@ public:
 	void Update(float l_dT);
 	void Draw(unsigned int l_layer);
 	void Draw_Background();
-	void Map::InsertTile(sf::Vector2i coords, int TileId);
-	void Map::SaveMap(const std::string& l_path);
-	void Map::drawTileSheet();
+	void InsertTile(sf::Vector2i coords, int TileId);
+	void SaveMap(const std::string& l_path);
+	void drawTileSheet();
 
 private:
 	// Method for converting 2D coordinates to 1D ints.

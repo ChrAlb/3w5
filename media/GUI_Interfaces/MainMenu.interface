@@ -1,0 +1,6 @@
+Interface MainMenu MainMenu.style 0 0 Immovable NoTitle "Main menu"
+Element Label Title 0 0 MainMenuTitle.style "WAS WOTTSCH MACHÄ"
+Element Label Play 0 48 MainMenuLabel.style "SPILÄ"
+Element Label Edit 0 96 MainMenuLabel.style "LEVELS BAUE"
+Element Label Quit 0 146 MainMenuLabel.style "TSCHÜSS"
+Element Label Lab 0  200 MainMenuLabel.style "Lab"

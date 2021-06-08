@@ -1,0 +1,8 @@
+Name Bullet
+Spritesheet Bullet.sheet
+Hitpoints 1
+BoundingBox 5 25
+DamageBox -5 0 5 5
+Speed 2500 0
+JumpVelocity 250
+MaxVelocity 10000 1024

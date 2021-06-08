@@ -1,0 +1,9 @@
+Interface SomeWindow TestInterface.style 0 0 Immovable Title "Wäu di Datei"
+Element Label Dateiname.map 50 30 Test.style "Dateiname.map"
+Element Label editordefault.map 50 60 Test.style "editordefault.map"
+Element Label editordefault.old 50 90 Test.style "editordefault.old"
+Element Label map1.map 50 120 Test.style "map1.map"
+Element Label map2.map 50 150 Test.style "map2.map"
+Element Label map3.map 50 180 Test.style "map3.map"
+Element Label test.map 50 210 Test.style "test.map"
+Element Scrollbar Slider1 0 0 TestScrollbar.style Vertical

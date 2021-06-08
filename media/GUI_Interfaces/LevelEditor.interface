@@ -1,0 +1,6 @@
+Interface LevelEditor LevelEditor.style 0 0 Immovable NoTitle "LevelEditor"
+Element TextField DatName 0 0 LevelEditorLabel.style "(hie Namä)"
+Element Label Load 180 0 LevelEditorLabel.style "Map Ladä"
+Element Label OK 0 60 LevelEditorLabel.style "Fertig"
+Element Label Abbrechen 180 60 LevelEditorLabel.style "Abbrächä"
+ 

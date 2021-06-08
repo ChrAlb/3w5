@@ -16,7 +16,7 @@ namespace Utils{
 			char path[256]="";
 			//GetModuleFileName(hModule,path,sizeof(path));
 			//PathRemoveFileSpec(path);
-			strcat_s(path, "c:\\Users\\albch\\Documents\\GitHub\\MarioGame\\Kapitel12\\MarioGames\\MarioGames");
+			strcat_s(path, "c:\\Users\\albch\\Documents\\GitHub\\3w5\\3w5\\3w5");
 			strcat_s(path,"\\");
 			//std::cout << path;
 			return std::string(path);
