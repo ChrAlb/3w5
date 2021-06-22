@@ -306,4 +306,20 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="textures.cfg.txt">
+      <Filter>Ressourcendateien</Filter>
+    </Text>
+    <Text Include="keys.cfg.txt">
+      <Filter>Ressourcendateien</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\Characters\Player.char">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="media\Spritesheets\Player.sheet">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+  </ItemGroup>
 </Project>

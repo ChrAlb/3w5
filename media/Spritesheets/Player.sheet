@@ -1,12 +1,12 @@
 Texture PlayerSprite
-Size 80 100
+Size 64 64
 Scale 1 1
 Padding 1 1
 Spacing 1 1
 |Type|Name|StartFrame|EndFrame|Row|FrameTime|FrameActionStart|FrameActionEnd|
 AnimationType Directional
-Animation Idle 0 1 0 10 -1 -1
-Animation Walk 0 3 0 0.1 -1 -1
-Animation Attack 0 5 4 0.06 -1 -1
+Animation Idle 0 0 0 10 -1 -1
+Animation Walk 0 5 2 0.1 -1 -1
+Animation Attack 0 5 5 0.06 -1 -1
 Animation SpellCast 0 6 8 0.1 2 3
 Animation Death 0 5 12 0.1 -1 -1

@@ -1,6 +1,6 @@
 Intro media/Textures/Start.png
 BgMenu media/Textures/BgMenu.png
-PlayerSprite media/Textures/PlayerSheet.png
+PlayerSprite media/Textures/Cowboy.png
 RatSprite media/Textures/RatSheet.png
 TileSheet media/Textures/tilesheet.png
 Bg1 media/Textures/bg1.png

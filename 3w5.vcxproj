@@ -253,6 +253,14 @@
     <ClInclude Include="Utilities.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="keys.cfg.txt" />
+    <Text Include="textures.cfg.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\Characters\Player.char" />
+    <None Include="media\Spritesheets\Player.sheet" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

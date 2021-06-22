@@ -26,6 +26,7 @@ void S_Movement::Update(float l_dT){
 		C_Movable* movable = entities->GetComponent<C_Movable>(entity, Component::Movable);
 		MovementStep(l_dT, movable, position);
 		position->MoveBy(movable->GetVelocity() * l_dT);
+		//movable->Accelerate(0, 500);
 	}
 }
 
