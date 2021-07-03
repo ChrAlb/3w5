@@ -259,6 +259,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="media\Characters\Player.char" />
+    <None Include="media\Maps\map1.map" />
     <None Include="media\Spritesheets\Player.sheet" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

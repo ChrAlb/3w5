@@ -321,5 +321,8 @@
     <None Include="media\Spritesheets\Player.sheet">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="media\Maps\map1.map">
+      <Filter>Ressourcendateien</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 #include "StateManager.h"
 
 Map::Map(SharedContext* l_context, BaseState* l_currentState)
-	:m_context(l_context), m_defaultTile(l_context), m_maxMapSize(64, 21), m_playerId(-1), m_currentState(l_currentState)
+	:m_context(l_context), m_defaultTile(l_context), m_maxMapSize(0, 0), m_playerId(-1), m_currentState(l_currentState)
 {
 	m_context->m_gameMap = this;
 	LoadTiles("tiles.cfg.txt");
