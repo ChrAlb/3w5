@@ -72,14 +72,20 @@ void S_Movement::Notify(const Message& l_message){
 const sf::Vector2f& S_Movement::GetTileFriction(unsigned int l_elevation,
 	unsigned int l_x, unsigned int l_y)
 {
+	
 	Tile* t = nullptr;
+
+	
 	while (!t && l_elevation >= 0){
-		t = m_gameMap->GetTile(l_x, l_y, l_elevation);
+		t = m_gameMap->GetTile(12, 12, l_elevation);
 		--l_elevation;
 	}
-
+	
+	
 	return(t ? t->m_properties->m_friction :
 		m_gameMap->GetDefaultTile()->m_friction);
+	
+	
 }
 
 void S_Movement::MovementStep(float l_dT, C_Movable* l_movable, C_Position* l_position){

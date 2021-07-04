@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() : m_window("3w4", sf::Vector2u(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height)),
+Game::Game() : m_window("3w5", sf::Vector2u(sf::VideoMode::getDesktopMode().width, sf::VideoMode::getDesktopMode().height)),
 	m_entityManager(&m_systemManager, &m_textureManager), m_stateManager(&m_context),
 	m_guiManager(m_window.GetEventManager(), &m_context), m_soundManager(&m_audioManager)
 {
