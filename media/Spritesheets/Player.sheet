@@ -1,8 +1,8 @@
 Texture PlayerSprite
 Size 64 64
 Scale 1 1
-Padding 1 1
-Spacing 1 1
+Padding 0 0
+Spacing 0 0
 |Type|Name|StartFrame|EndFrame|Row|FrameTime|FrameActionStart|FrameActionEnd|
 AnimationType Directional
 Animation Idle 0 0 0 10 -1 -1
