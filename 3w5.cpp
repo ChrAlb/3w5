@@ -12,3 +12,8 @@ void main(int argc, void** argv[]) {
 	}
 	system("PAUSE");
 }
+
+/*
+To Do's
+- Fehler bei GetTileFriction in S_Movement.cpp
+*/

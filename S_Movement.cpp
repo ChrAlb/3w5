@@ -78,6 +78,12 @@ const sf::Vector2f& S_Movement::GetTileFriction(unsigned int l_elevation,
 	
 	while (!t && l_elevation >= 0){
 
+		/*
+		Hier ist ein Fehler. Sofern die Map "leere" Tiles hat, ist die while Schleife ein unendlich Loop wegen
+		l_elevation. Nach 0 erhält l_elevation als unsigned int den Wert 43xxxx. l_elevation geht nie unter 0 und wenn bei l_x, l_y 
+		nie ein Tile ist, wird t auch nie positiv.
+		*/
+
 		t = m_gameMap->GetTile(12,12, l_elevation);
 		--l_elevation;
 	}
