@@ -26,7 +26,7 @@ void S_Movement::Update(float l_dT){
 		C_Movable* movable = entities->GetComponent<C_Movable>(entity, Component::Movable);
 		MovementStep(l_dT, movable, position);
 		position->MoveBy(movable->GetVelocity() * l_dT);
-		//movable->Accelerate(0, 500);
+		movable->Accelerate(0, 500);
 	}
 }
 
@@ -77,13 +77,18 @@ const sf::Vector2f& S_Movement::GetTileFriction(unsigned int l_elevation,
 
 	
 	while (!t && l_elevation >= 0){
-		t = m_gameMap->GetTile(12, 12, l_elevation);
+
+		t = m_gameMap->GetTile(12,12, l_elevation);
 		--l_elevation;
 	}
-	
-	
 	return(t ? t->m_properties->m_friction :
 		m_gameMap->GetDefaultTile()->m_friction);
+
+	
+	/*
+	t = m_gameMap->GetTile(l_x, l_y, 0);
+	return(t ? t->m_properties->m_friction : sf::Vector2f (1, 1));
+	*/
 	
 	
 }

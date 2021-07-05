@@ -71,6 +71,7 @@ void State_Game::UpdateCamera(){
 		context->m_wind->GetRenderWindow()->setView(m_view);
 	}
 
+	
 	if (viewSpace.top <= 0){
 		m_view.setCenter(m_view.getCenter().x, viewSpace.height / 2);
 		context->m_wind->GetRenderWindow()->setView(m_view);
@@ -78,6 +79,7 @@ void State_Game::UpdateCamera(){
 		m_view.setCenter(m_view.getCenter().x, ((m_gameMap->GetMapSize().y) * Sheet::Tile_Size) - (viewSpace.height / 2));
 		context->m_wind->GetRenderWindow()->setView(m_view);
 	}  
+	
 }
 
 void State_Game::Draw(){

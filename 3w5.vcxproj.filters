@@ -324,5 +324,13 @@
     <None Include="media\Maps\map1.map">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="media\Entities\Player.entity">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="media\Textures\Cowboy.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
   </ItemGroup>
 </Project>
