@@ -1,7 +1,7 @@
 SIZE 64 21
 DEFAULT_FRICTION 1.0 1.0
 |ENTITY|Name|x|y|elevation|
-ENTITY Player 256.0 256.0 1
+ENTITY Player 256.0 850.0 1
 //ENTITY Skeleton 90.0 90.0 1
 |TILE|ID|x|y|layer|solid|
 TILE 0 0 18 0 1
