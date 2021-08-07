@@ -84,17 +84,18 @@ const sf::Vector2f& S_Movement::GetTileFriction(unsigned int l_elevation,
 		nie ein Tile ist, wird t auch nie positiv.
 		*/
 
-		t = m_gameMap->GetTile(12,12, l_elevation);
+		t = m_gameMap->GetTile(0,18, l_elevation);
 		--l_elevation;
+		
+		if (l_elevation > 5)
+			break;
 	}
-	return(t ? t->m_properties->m_friction :
-		m_gameMap->GetDefaultTile()->m_friction);
-
 	
-	/*
-	t = m_gameMap->GetTile(l_x, l_y, 0);
-	return(t ? t->m_properties->m_friction : sf::Vector2f (1, 1));
-	*/
+	return(t ? t->m_properties->m_friction :
+		m_gameMap->GetDefaultTile()->m_friction); 
+
+	//return (t ? t->m_properties->m_friction : sf::Vector2f(1, 0));
+	
 	
 	
 }
