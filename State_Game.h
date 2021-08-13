@@ -20,6 +20,7 @@ public:
 	void MainMenu(EventDetails* l_details);
 	void Pause(EventDetails* l_details);
 	void PlayerMove(EventDetails* l_details);
+	void PlayerJump(EventDetails* l_details);
 
 	// Debug:
 	void ToggleOverlay(EventDetails* l_details);

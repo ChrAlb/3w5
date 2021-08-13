@@ -13,6 +13,7 @@ Player_MoveLeft 24:71
 Player_MoveRight 24:72
 //Player_MoveUp 24:73
 //Player_MoveDown 24:74
+Player_Jump 24:57
 Player_Attack 24:73
 MainMenu_Play 27:MainMenu:Play
 MainMenu_Edit 27:MainMenu:Edit

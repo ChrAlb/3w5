@@ -15,6 +15,7 @@ void State_Game::OnCreate(){
 	evMgr->AddCallback(StateType::Game, "Player_MoveRight", &State_Game::PlayerMove, this);
 	evMgr->AddCallback(StateType::Game, "Player_MoveUp", &State_Game::PlayerMove, this);
 	evMgr->AddCallback(StateType::Game, "Player_MoveDown", &State_Game::PlayerMove, this);
+	evMgr->AddCallback(StateType::Game, "Player_Jump", &State_Game::PlayerJump, this);
 
 	sf::Vector2u size = m_stateMgr->GetContext()->m_wind->GetWindowSize();
 	m_view.setSize(size.x, size.y);
@@ -42,7 +43,7 @@ void State_Game::OnDestroy(){
 	evMgr->RemoveCallback(StateType::Game, "Player_MoveRight");
 	evMgr->RemoveCallback(StateType::Game, "Player_MoveUp");
 	evMgr->RemoveCallback(StateType::Game, "Player_MoveDown");
-	
+	evMgr->RemoveCallback(StateType::Game, "Player_Jump");
 	delete m_gameMap;
 }
 
@@ -113,6 +114,13 @@ void State_Game::PlayerMove(EventDetails* l_details){
 	} else if (l_details->m_name == "Player_MoveDown"){
 		msg.m_int = (int)Direction::Down;
 	}
+	msg.m_receiver = m_player;
+	m_stateMgr->GetContext()->m_systemManager->GetMessageHandler()->Dispatch(msg);
+}
+
+void State_Game::PlayerJump(EventDetails* l_details)
+{
+	Message msg((MessageType)EntityMessage::StartJump);
 	msg.m_receiver = m_player;
 	m_stateMgr->GetContext()->m_systemManager->GetMessageHandler()->Dispatch(msg);
 }

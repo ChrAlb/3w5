@@ -50,6 +50,8 @@ void S_Movement::HandleEvent(const EntityId& l_entity,
 			if(mov->GetVelocity().x == 0){ SetDirection(l_entity, Direction::Down); }
 		}
 		break;
+	case EntityEvent::Jumping : 
+	    {}
 	}
 }
 
@@ -87,16 +89,11 @@ const sf::Vector2f& S_Movement::GetTileFriction(unsigned int l_elevation,
 		t = m_gameMap->GetTile(0,18, l_elevation);
 		--l_elevation;
 		
-		if (l_elevation > 5)
-			break;
 	}
 	
 	return(t ? t->m_properties->m_friction :
 		m_gameMap->GetDefaultTile()->m_friction); 
 
-	//return (t ? t->m_properties->m_friction : sf::Vector2f(1, 0));
-	
-	
 	
 }
 

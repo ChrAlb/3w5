@@ -10,6 +10,7 @@ S_State::S_State(SystemManager* l_systemMgr)
 
 	m_systemManager->GetMessageHandler()->Subscribe(EntityMessage::Move,this);
 	m_systemManager->GetMessageHandler()->Subscribe(EntityMessage::Switch_State,this);
+	m_systemManager->GetMessageHandler()->Subscribe(EntityMessage::StartJump, this);
 }
 
 S_State::~S_State(){}
@@ -64,6 +65,12 @@ void S_State::Notify(const Message& l_message){
 	case EntityMessage::Switch_State: 
 		ChangeState(l_message.m_receiver,
 			(EntityState)l_message.m_int,false);
+		break;
+	case EntityMessage::StartJump:
+		EntityEvent e;
+		e = EntityEvent::Jumping;
+		m_systemManager->AddEvent(l_message.m_receiver, (EventID)e);
+		ChangeState(l_message.m_receiver, EntityState::Jumping, false);
 		break;
 	}
 }
