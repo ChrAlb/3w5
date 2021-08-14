@@ -120,7 +120,7 @@ void State_Game::PlayerMove(EventDetails* l_details){
 
 void State_Game::PlayerJump(EventDetails* l_details)
 {
-	Message msg((MessageType)EntityMessage::StartJump);
+ 	Message msg((MessageType)EntityMessage::StartJump);
 	msg.m_receiver = m_player;
 	m_stateMgr->GetContext()->m_systemManager->GetMessageHandler()->Dispatch(msg);
 }

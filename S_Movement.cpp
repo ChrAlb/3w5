@@ -51,7 +51,11 @@ void S_Movement::HandleEvent(const EntityId& l_entity,
 		}
 		break;
 	case EntityEvent::Jumping : 
-	    {}
+	    {
+		C_Movable* mov = m_systemManager->GetEntityManager()->GetComponent<C_Movable>(l_entity, Component::Movable);
+		mov->Accelerate(0, -250);
+
+	}
 	}
 }
 
