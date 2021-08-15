@@ -26,7 +26,7 @@ void S_Movement::Update(float l_dT){
 		C_Movable* movable = entities->GetComponent<C_Movable>(entity, Component::Movable);
 		MovementStep(l_dT, movable, position);
 		position->MoveBy(movable->GetVelocity() * l_dT);
-		movable->Accelerate(0, 500);
+		movable->Accelerate(0,500);
 	}
 }
 
@@ -52,10 +52,12 @@ void S_Movement::HandleEvent(const EntityId& l_entity,
 		break;
 	case EntityEvent::Jumping : 
 	    {
+		C_Position* pos = m_systemManager->GetEntityManager()->GetComponent<C_Position>(l_entity, Component::Position); 
 		C_Movable* mov = m_systemManager->GetEntityManager()->GetComponent<C_Movable>(l_entity, Component::Movable);
 		mov->Accelerate(0, -250);
+		;
 
-	}
+	     }
 	}
 }
 
