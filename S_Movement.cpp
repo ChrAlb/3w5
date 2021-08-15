@@ -52,13 +52,7 @@ void S_Movement::HandleEvent(const EntityId& l_entity,
 		break;
 	case EntityEvent::Jumping : 
 	    {
-		C_Position* pos = m_systemManager->GetEntityManager()->GetComponent<C_Position>(l_entity, Component::Position); 
-		C_Movable* mov = m_systemManager->GetEntityManager()->GetComponent<C_Movable>(l_entity, Component::Movable);
-		sf::Vector2f tt;
-		tt = pos->GetPosition();
-		tt = tt + sf::Vector2f(0, -25);
-		pos->SetPosition(tt);
-		//mov->Accelerate(0, -250);
+		jump(l_entity);
 	     }
 		break;
 	}
@@ -67,16 +61,17 @@ void S_Movement::HandleEvent(const EntityId& l_entity,
 void S_Movement::Notify(const Message& l_message){
 	EntityManager* eMgr = m_systemManager->GetEntityManager();
 	EntityMessage m = (EntityMessage)l_message.m_type;
-	switch(m){
+	switch (m) {
 	case EntityMessage::Is_Moving:
-		{
-		if (!HasEntity(l_message.m_receiver)){ return; }
+	{
+		if (!HasEntity(l_message.m_receiver)) { return; }
 		C_Movable* movable = eMgr->GetComponent<C_Movable>
 			(l_message.m_receiver, Component::Movable);
-		if (movable->GetVelocity() != sf::Vector2f(0.0f, 0.0f)){ return; }
-		m_systemManager->AddEvent(l_message.m_receiver,(EventID)EntityEvent::Became_Idle);
-		}
-		break;
+		if (movable->GetVelocity() != sf::Vector2f(0.0f, 0.0f)) { return; }
+		m_systemManager->AddEvent(l_message.m_receiver, (EventID)EntityEvent::Became_Idle);
+	}
+	break;
+	
 	}
 }
 
@@ -127,6 +122,19 @@ void S_Movement::MovementStep(float l_dT, C_Movable* l_movable, C_Position* l_po
 	l_movable->SetVelocity(sf::Vector2f(
 		(l_movable->GetVelocity().x / magnitude) * max_V,
 		(l_movable->GetVelocity().y / magnitude) * max_V));
+}
+
+void S_Movement::jump(const EntityId& l_entity)
+{
+	C_Position* pos = m_systemManager->GetEntityManager()->GetComponent<C_Position>(l_entity, Component::Position);
+	C_Movable* mov = m_systemManager->GetEntityManager()->GetComponent<C_Movable>(l_entity, Component::Movable);
+	sf::Vector2f tt;
+	tt = pos->GetPosition();
+	tt = tt + sf::Vector2f(0, -250);
+	pos->SetPosition(tt);
+	//mov->Accelerate(0, -250);
+
+
 }
 
 void S_Movement::SetMap(Map* l_gameMap){ m_gameMap = l_gameMap; }
