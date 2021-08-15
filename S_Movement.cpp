@@ -54,10 +54,13 @@ void S_Movement::HandleEvent(const EntityId& l_entity,
 	    {
 		C_Position* pos = m_systemManager->GetEntityManager()->GetComponent<C_Position>(l_entity, Component::Position); 
 		C_Movable* mov = m_systemManager->GetEntityManager()->GetComponent<C_Movable>(l_entity, Component::Movable);
-		mov->Accelerate(0, -250);
-		;
-
+		sf::Vector2f tt;
+		tt = pos->GetPosition();
+		tt = tt + sf::Vector2f(0, -25);
+		pos->SetPosition(tt);
+		//mov->Accelerate(0, -250);
 	     }
+		break;
 	}
 }
 
