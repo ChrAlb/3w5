@@ -67,10 +67,7 @@ void S_State::Notify(const Message& l_message){
 			(EntityState)l_message.m_int,false);
 		break;
 	case EntityMessage::StartJump:
-		EntityEvent e;
-		e = EntityEvent::Jumping;
-		m_systemManager->AddEvent(l_message.m_receiver, (EventID)e);
-		ChangeState(l_message.m_receiver, EntityState::Jumping, false);
+		;
 		break;
 	}
 }

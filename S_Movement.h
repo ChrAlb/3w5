@@ -21,7 +21,7 @@ private:
 	const sf::Vector2f& GetTileFriction(unsigned int l_elevation, 
 		unsigned int l_x, unsigned int l_y);
 	void MovementStep(float l_dT, C_Movable* l_movable, C_Position* l_position);
-	void jump(const EntityId& l_entity);
+	
 
 	Map* m_gameMap;
 };
