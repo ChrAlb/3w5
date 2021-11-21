@@ -20,4 +20,4 @@ public:
 	virtual void ReadIn(std::stringstream& l_stream) = 0;
 protected:
 	Component m_type;
-};
+};   
